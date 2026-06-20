@@ -16,7 +16,7 @@ load_dotenv()
 # ==========================================
 st.set_page_config(
     page_title="Suporte Técnico WEG",
-    page_icon="⚡",
+    page_icon="🔷",
     layout="wide"
 )
 
@@ -38,7 +38,7 @@ st.markdown("""
 # ==========================================
 with st.sidebar:
     # URL pública do logo da WEG para deixar profissional
-    st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/WEG_logo.svg/1200px-WEG_logo.svg.png", width=150)
+    st.image("weg_logo.svg", width=150)
     st.title("⚙️ Info do Projeto")
     st.markdown("**Empresa:** PowerTech Solutions")
     st.markdown("**Produto:** WEG Nobreak Corporate 5 kVA")
@@ -55,7 +55,7 @@ with st.sidebar:
 # ==========================================
 # 3. VALIDAÇÃO DE API E STATUS
 # ==========================================
-st.title("⚡ Assistente de Suporte Técnico WEG")
+st.title("Assistente de Suporte Técnico WEG")
 
 nvidia_api_key = os.getenv("API_KEY")
 
@@ -63,7 +63,7 @@ if not nvidia_api_key:
     st.error("Chave API não encontrada no arquivo .env.")
     st.stop()
 else:
-    st.sidebar.success("🟢 IA Conectada")
+    st.sidebar.success("IA Conectada")
 
 # ==========================================
 # 4. PIPELINE DO RAG E VETORIZAÇÃO
@@ -93,7 +93,7 @@ def inicializar_rag():
     )
 
     vectorstore = FAISS.from_documents(docs, embedding=embeddings)
-    st.sidebar.success("🧮 Vetorização Concluída")
+    st.sidebar.success("Vetorização Concluída")
 
     return vectorstore.as_retriever(search_kwargs={"k": 5})
 
