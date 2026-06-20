@@ -70,7 +70,7 @@ else:
 # ==========================================
 @st.cache_resource(show_spinner="Processando o Manual WEG...")
 def inicializar_rag():
-    nome_arquivo = "material.pdf"
+    nome_arquivo = "manual.pdf"
 
     if not os.path.exists(nome_arquivo):
         st.error(f"Arquivo '{nome_arquivo}' não encontrado.")
