@@ -1,1 +1,0 @@
-# powertech-weg-manual
