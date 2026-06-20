@@ -81,8 +81,8 @@ def inicializar_rag():
     st.sidebar.success("Manual Carregado")
 
     text_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=700,
-        chunk_overlap=150,
+        chunk_size=512,
+        chunk_overlap=200,
     )
     docs = text_splitter.split_documents(paginas)
 
