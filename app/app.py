@@ -42,7 +42,6 @@ with st.sidebar:
     st.title("⚙️ Info do Projeto")
     st.markdown("**Empresa:** PowerTech Solutions")
     st.markdown("**Produto:** WEG Nobreak Corporate 5 kVA")
-    st.markdown("**Equipe Lunitec:** Luan, Luiz, Bigode, Bertocco, Nicolas")
     st.markdown("**Modelo IA:** Llama 3.1 8B (NVIDIA)")
     
     st.divider()
