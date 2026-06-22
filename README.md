@@ -144,9 +144,3 @@ A barra lateral também exibe o status da conexão com a API, a confirmação de
 Projeto de caráter **educacional/demonstrativo**. Sinta-se à vontade para estudar, adaptar e reutilizar o código como referência para outros pipelines de RAG com Streamlit + LangChain + NVIDIA AI Endpoints.
 
 ---
-
-<div align="center">
-
-Feito com 💙 pela equipe **Lunitec**
-
-</div>
