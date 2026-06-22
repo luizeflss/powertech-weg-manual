@@ -59,11 +59,11 @@ st.title("Assistente de Suporte Técnico WEG")
 
 nvidia_api_key = os.getenv("API_KEY")
 
-if not nvidia_api_key:
+if nvidia_api_key:
+    st.sidebar.success("IA Conectada")
+else:
     st.error("Chave API não encontrada no arquivo .env.")
     st.stop()
-else:
-    st.sidebar.success("IA Conectada")
 
 # ==========================================
 # 4. PIPELINE DO RAG E VETORIZAÇÃO
@@ -104,8 +104,8 @@ llm = ChatNVIDIA(
     model="meta/llama-3.1-8b-instruct",
     api_key=nvidia_api_key,
     base_url="https://integrate.api.nvidia.com/v1",
-    temperature=0.1,    # Baixa criatividade para focar no manual
-    max_tokens=1024     # Requisito Técnico da Etapa 2
+    temperature=0.1,  # Baixa criatividade para focar no manual
+    max_tokens=1024    # Requisito Técnico da Etapa 2
 )
 
 # ==========================================
